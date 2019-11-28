@@ -11,7 +11,7 @@ class Calculator(ConanFile):
         # put definitions here so that they are re-used in cmake between
         # build() and package()
         cmake.definitions["BUILD_UTEST"] = "ON"
-        cmake.definitions["USE_COVERAGE"] = "ON"
+        cmake.definitions["USE_COVERAGE"] = "OFF"
 
         cmake.configure()
         return cmake
@@ -22,5 +22,5 @@ class Calculator(ConanFile):
         cmake.build()
         # run unit tests after the build
         cmake.test()
-        self.run("../show_coverage.sh")
+        # self.run("../show_coverage.sh")
         
