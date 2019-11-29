@@ -17,19 +17,19 @@ if(BUILD_UTEST)
     conan_basic_setup(TARGETS)
     # Code Coverage Configuration
     add_library(test_calc OBJECT src/utils/calculator.cpp)
-    add_executable(testCalcAdd test/calculator_test.cpp $<TARGET_OBJECTS:test_calc> ${CONAN_LIBS}) 
+    add_executable(testCalcAdd test/calculator_test.cpp $<TARGET_OBJECTS:test_calc> ${CONAN_LIBS})
     target_link_libraries(testCalcAdd CONAN_PKG::doctest)
-    
+
     if(USE_COVERAGE)
         target_compile_options(testCalcAdd
-            PUBLIC
+                PUBLIC
                 "-O0"
                 "-fprofile-arcs"
                 "-ftest-coverage"
-        )
+                )
         target_link_libraries(testCalcAdd
-            gcov
-        )
+                gcov
+                )
     endif(USE_COVERAGE)
 
     include(CTest)

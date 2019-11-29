@@ -1,7 +1,7 @@
 from conans import ConanFile, CMake
 
 class Calculator(ConanFile):
-    name = "BluetoohLib"
+    name = "Calculator"
     version = "0.1"
     url = "Basic-Calculator"
     description = "<Description of Hello here>"
@@ -34,4 +34,4 @@ class Calculator(ConanFile):
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = ["BluetoohLib"]
+        self.cpp_info.libs = ["Calculator"]
