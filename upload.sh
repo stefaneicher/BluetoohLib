@@ -1,3 +1,5 @@
 #!/bin/bash
+cd "$(dirname "$0")" || exit
 
-conan upload BluetoohLib/0.1@demo/testing --all -r=local_artifactory
+./createWithDocker.sh
+conan upload Calculator/0.1@user/testing --all -r=local_conan_artifactory

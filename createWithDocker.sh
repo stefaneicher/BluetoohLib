@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-DIRECTORY=`dirname $0`
-cd $DIRECTORY
+cd "$(dirname "$0")" || exit
 
 docker run -i \
 -v "${HOME}"/.conan:/home/conan/.conan \
