@@ -2,7 +2,7 @@ from conans import ConanFile, CMake
 
 class Calculator(ConanFile):
     name = "Calculator"
-    version = "0.1"
+    version = "1.0"
     url = "Basic-Calculator"
     description = "<Description of Hello here>"
     settings = "os", "compiler", "build_type", "arch"
