@@ -1,11 +1,8 @@
-#include "utils/calculator.hpp"
+#include "periperie/bluetooth.hpp"
 #include <iostream>
 
-int main(int argc, char *argv[])
-{
-    Utils::Calculator calc;
-
-    std::cout<<"------ VALUE ------"<<std::endl;
-    std::cout<<calc.addition(10,15)<<std::endl;
+int main(int argc, char *argv[]) {
+    Peripherie::Bluetooth bluetooth;
+    std::cout << bluetooth.addition(10, 15) << std::endl;
     return 0;
 }

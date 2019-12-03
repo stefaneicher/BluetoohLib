@@ -1,9 +1,9 @@
 from conans import ConanFile, CMake
 
-class Calculator(ConanFile):
-    name = "Calculator"
+class Bluetooth(ConanFile):
+    name = "Bluetooth"
     version = "1.0"
-    url = "Basic-Calculator"
+    url = "Bluetooth Library"
     description = "<Description of Hello here>"
     settings = "os", "compiler", "build_type", "arch"
     requires = "doctest/2.3.4@bincrafters/stable" # comma-separated list of requirements
@@ -34,4 +34,4 @@ class Calculator(ConanFile):
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = ["Calculator"]
+        self.cpp_info.libs = ["Bluetooth"]
