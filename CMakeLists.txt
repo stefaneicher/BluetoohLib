@@ -35,5 +35,5 @@ if(BUILD_UTEST)
     include(CTest)
     enable_testing()
     add_test(NAME testCalcAdd COMMAND testCalcAdd)
-endif(BUILD_TESTS)
+endif()
 
